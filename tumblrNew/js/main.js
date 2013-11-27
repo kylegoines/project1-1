@@ -1,9 +1,9 @@
 var bgArray = ['img/bg1.jpg','img/bg2.jpg','img/bg3.jpg','img/bg4.jpg', 'img/bg5.jpg'];
-var text1 = "bg1";
-var text2 = "bg2";
-var text3 = "bg3";
-var text4 = "bg4";
-var text5 = "bg5";
+var text1 = "IBM Watson can cross-reference the symptoms of millions of cancer patients to help doctors design better treatments. Watson is helping doctors fight cancer.";
+var text2 = "IBM Watson can read millions of financial reports so planners can recommend better investments. Watson will help improve financial planning.";
+var text3 = "IBM Watson can analyze terabits of data to help operators quickly find answers to a caller’s question. Watson will help transform customer service.";
+var text4 = "IBM Watson can read millions of financial reports so planners can recommend better investments. Watson will help improve financial planning.";
+var text5 = "IBM Watson can cross-reference the symptoms of millions of cancer patients to help doctors design better treatments. Watson is helping doctors fight cancer.";
 var textArray = [text1, text2, text3, text4, text5];
 
 var wholeBG = $('.bg, .subDesc');

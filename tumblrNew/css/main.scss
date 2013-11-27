@@ -179,11 +179,16 @@ body{
 
 
 .callout{
+    position: fixed;
     padding-top: 130px;
     float: left;
-    width: 290px;
+    
     //background: red;
-    margin-left: 85px;
+    margin-left: 40%;
+
+    .calloutHeader{
+        float: left;
+    }
 
     h2{
         font-family: $fontSpecialBold;
@@ -195,6 +200,7 @@ body{
     }
 
     p{
+        width: 290px;
         font-size: 14px;
         color: #fff;
         line-height: 17px
@@ -207,6 +213,8 @@ body{
     }
 
     .subDesc{
+        position: relative;
+        top: 180px;
         margin-top: 180px;
         background-color: red;
         font-family: $fontMain;
@@ -228,3 +236,34 @@ body{
     height: 34px;
     text-indent: -9999px;
 }
+
+.social{
+
+    //margin-top: 120px;
+
+    float: left;
+
+    a{
+        display: block;
+        text-indent: -9999px;
+        height: 28px;
+        width: 28px;
+    }
+
+    li{
+        padding-top:5px;
+    }
+    .btn1{
+        background-image: url(../img/avatar-button.png); 
+    }
+
+    .btn2{
+        background-image: url(../img/dot-button.png); 
+    }
+
+    .btn3{
+        background-image: url(../img/rss-button.png); 
+    }
+
+}
+
