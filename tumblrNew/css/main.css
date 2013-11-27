@@ -1,0 +1,136 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, html a {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
+
+html, body {
+  height: 100%; }
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  color: #464646; }
+
+.container {
+  position: absolute;
+  margin-left: 192px; }
+
+.bg {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: red;
+  z-index: -9999;
+  background: url(../img/bg1.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.postList {
+  float: left;
+  width: 416px; }
+
+.post {
+  width: 416px;
+  font-size: 15px;
+  line-height: 20px;
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 20px 15px;
+  box-shadow: 0px 1px 2px #000;
+  position: relative; }
+  .post h2 a {
+    font-size: 1.563em;
+    line-height: 2.031em;
+    font-family: "ITCLubalinGraphW01-Bd";
+    color: #464646;
+    text-decoration: none; }
+    .post h2 a:hover {
+      color: #464646;
+      text-decoration: underline; }
+  .post p {
+    width: 385px;
+    font-family: "HelveticaNeueW01-65Medi"; }
+  .post .info {
+    z-index: -999;
+    position: absolute; }
+  .post a {
+    color: #003471;
+    font-family: "HelveticaNeueW01-65Medi";
+    font-weight: 700;
+    text-decoration: none; }
+    .post a:hover {
+      color: #1c5597; }
+
+.callout {
+  float: left;
+  width: 290px;
+  margin-left: 50px; }
+  .callout h2 {
+    font-family: "ITCLubalinGraphW01-Bd";
+    font-size: 20px;
+    margin-top: 28px;
+    color: #fff;
+    text-transform: uppercase; }
+  .callout p {
+    margin-top: 19px;
+    font-size: 14px;
+    color: #fff;
+    font-family: "HelveticaNeueW01-65Medi";
+    line-height: 17px; }
+
+.watsonTitle {
+  background: url(../img/watson-title.png) no-repeat;
+  width: 282px;
+  height: 34px;
+  text-indent: -9999px; }
