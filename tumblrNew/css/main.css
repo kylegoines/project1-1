@@ -57,6 +57,13 @@ html, html a {
 html, body {
   height: 100%; }
 
+header h2, .post h2 a {
+  font-size: 1.563em;
+  line-height: 2.031em;
+  font-family: "ITCLubalinGraphW01-Bd";
+  color: #464646;
+  text-decoration: none; }
+
 h1, h2, h3, h4, h5, h6, p, ul {
   color: #464646; }
 
@@ -66,6 +73,12 @@ body {
 .container {
   position: absolute;
   margin-left: 9%; }
+  @media (max-width: 1118px) {
+    .container {
+      margin-left: 0px;
+      width: 416px;
+      margin: 0 auto;
+      position: relative; } }
 
 .bg {
   height: 100%;
@@ -79,7 +92,23 @@ body {
   background-size: cover; }
 
 header {
-  clear: both; }
+  margin-top: 15px;
+  clear: both;
+  z-index: 9999;
+  width: 416px;
+  font-size: 15px;
+  line-height: 20px;
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 20px 15px;
+  height: 161px;
+  box-shadow: 0px 1px 2px #000;
+  position: relative; }
+  header .holder {
+    background-color: #000;
+    width: 390px;
+    margin: 0 auto;
+    height: 84px; }
 
 .postList {
   float: left;
@@ -95,15 +124,9 @@ header {
   padding: 20px 15px;
   box-shadow: 0px 1px 2px #000;
   position: relative; }
-  .post h2 a {
-    font-size: 1.563em;
-    line-height: 2.031em;
-    font-family: "ITCLubalinGraphW01-Bd";
+  .post h2 a:hover {
     color: #464646;
-    text-decoration: none; }
-    .post h2 a:hover {
-      color: #464646;
-      text-decoration: underline; }
+    text-decoration: underline; }
   .post p {
     width: 385px;
     font-family: "HelveticaNeueW01-65Medi"; }
@@ -170,11 +193,17 @@ header {
     margin-top: 28px;
     color: #fff;
     text-transform: uppercase; }
+    @media (max-width: 1118px) {
+      .callout h2 {
+        font-size: 30px; } }
   .callout p {
     width: 290px;
     font-size: 14px;
     color: #fff;
     line-height: 17px; }
+    @media (max-width: 1118px) {
+      .callout p {
+        width: 416px; } }
   .callout .desc {
     margin-top: 19px;
     font-size: 15px;
@@ -212,9 +241,9 @@ header {
   @media (max-width: 1118px) {
     .watsonTitle {
       width: 100%;
-      height: 49px;
-      background-position: cover;
-      background-size: cover; } }
+      height: 51px;
+      background-size: cover;
+      margin-top: 15px; } }
 
 .social {
   float: left; }
@@ -225,6 +254,12 @@ header {
     width: 28px; }
   .social li {
     padding-top: 5px; }
+    @media (max-width: 1118px) {
+      .social li {
+        float: left;
+        padding-right: 10px;
+        position: relative;
+        top: 10px; } }
   .social .btn1 {
     background-image: url(../img/avatar-button.png); }
   .social .btn2 {
@@ -241,12 +276,24 @@ header {
   height: 97px;
   text-indent: -99999px; }
 
+#clock {
+  text-align: center;
+  position: relative;
+  top: 17px; }
+
 #clock span {
   display: inline-block;
   width: 30px;
   height: 52px;
   background: url("../img/new_num.jpg");
-  background-position: 0 0; }
+  background-position: 0 0;
+  margin-right: 6px; }
 
 #clock span:nth-child(even) {
   margin-right: 0px; }
+
+#clock .time {
+  background: url(../img/colin.jpg);
+  width: 14px;
+  height: 52px;
+  margin-left: 3px; }

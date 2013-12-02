@@ -49,3 +49,55 @@ function iterator() {
     } 
     setTimeout(iterator, 2000);
 };
+
+
+
+
+            jQuery( function($) {
+
+                function resizeFunc(){
+                  var $width = $(window).width();
+                  if($width <= 1118){
+                    var keep = $('.callout').detach();
+                    //var postHeight = $('.container').height()
+                    //console.log(postHeight)
+                    //$('.container').css('top',(parseInt(130-postHeight) + 'px'))
+                    
+                    $('.postList').prepend(keep)
+                  }
+                }
+
+                //this replaces the callout as the header at certian sizes
+                $( window ).resize(resizeFunc);
+                resizeFunc();
+
+                var fut = new Date("Jan 20 2014 21:15:00 GMT+0200").getTime(),
+                    obj = {};
+
+                // Number splitter
+                function intSpl( i ){
+                  i = Math.floor(i);
+                  return [~~(i/10), i%10]; // 37=[3,7] // 5=[0,5] // 0=[0,0] 
+                }
+
+                function drawTime(){  
+                  var now = new Date().getTime(),   
+                      dif = now<fut ? Math.floor( (fut-now)/1000) : 0;
+                  obj.s = intSpl(dif % 60);
+                  obj.m = intSpl(dif/60 % 60);
+                  obj.h = intSpl(dif/60/60 % 24);
+                  obj.d = intSpl(dif/60/60/24);  
+
+                  for(var key in obj){    
+                     if(obj.hasOwnProperty(key)){
+                        for(var i=0; i<2; i++){ // get el ID number (0,1)
+                          //this has to be the width of the image
+                            $('#'+ key+i).css({backgroundPosition: -obj[key][i]*30 });
+                        }
+                     }    
+                  }  
+                }
+                drawTime(); 
+                setInterval(drawTime, 1000);
+
+            });
