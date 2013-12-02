@@ -120,6 +120,14 @@ header {
     .postList {
       position: relative; } }
 
+.touch .post .info {
+  left: -90px;
+  opacity: 1;
+  transition: none; }
+
+.touch .post:hover > .info {
+  left: -90px; }
+
 .post {
   z-index: 9999;
   width: 416px;
@@ -154,21 +162,6 @@ header {
       .post .info a:hover {
         color: #e7e7e7;
         text-decoration: underline; }
-  .post html.touch .info {
-    font-family: "HelveticaNeueW01-65Medi";
-    font-size: 13px;
-    top: 30px;
-    left: 100px;
-    position: absolute;
-    width: 100px;
-    transition: all .4s;
-    color: #fff;
-    -webkit-transition: all .4s;
-    /* Safari */
-    opacity: 1; }
-    .post html.touch .info a {
-      color: #fff;
-      font-weight: normal; }
   .post a {
     color: #003471;
     font-family: "HelveticaNeueW01-65Medi";

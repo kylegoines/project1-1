@@ -153,6 +153,9 @@ body{
 }
 
 
+
+
+
 ///////////////////////////////
 //header
 //////////////////////////////
@@ -198,6 +201,21 @@ header{
         //top: -130px;
     }
 }
+
+//////////////////////////////
+//--mobile touch special case---
+//utilizing modernizer
+//////////////////////////////
+.touch .post .info{
+    left: -90px;
+    opacity: 1;
+    transition: none;
+}
+
+.touch .post:hover > .info{
+    left: -90px;
+}
+//////////////////////////////
 
 .post{
     z-index: 9999;
@@ -247,26 +265,7 @@ header{
     }
 
 
-    //special case for touch, keep list items visiable... no hover....
-    html.touch .info{
-        font-family: $fontMain;
-        font-size: 13px;
-        top: 30px;
-        left: 100px;
-        // /background-color: red;
-        
-        position: absolute;
-        width: 100px;
-        transition: all .4s;
-        color: #fff;
-        -webkit-transition: all .4s; /* Safari */
-        opacity: 1;
-        a{
-            color: #fff;
-            font-weight: normal;
-        }
 
-    }
 
     a{
         color: $linkColor;
