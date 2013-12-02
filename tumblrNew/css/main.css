@@ -101,7 +101,7 @@ header {
   background-color: #fff;
   margin-bottom: 15px;
   padding: 20px 15px;
-  height: 161px;
+  height: 181px;
   box-shadow: 0px 1px 2px #000;
   position: relative; }
   header .holder {
@@ -109,10 +109,16 @@ header {
     width: 390px;
     margin: 0 auto;
     height: 84px; }
+  @media (max-width: 1118px) {
+    header h2 {
+      text-align: center; } }
 
 .postList {
   float: left;
   width: 416px; }
+  @media (max-width: 1118px) {
+    .postList {
+      position: relative; } }
 
 .post {
   z-index: 9999;
@@ -148,6 +154,21 @@ header {
       .post .info a:hover {
         color: #e7e7e7;
         text-decoration: underline; }
+  .post html.touch .info {
+    font-family: "HelveticaNeueW01-65Medi";
+    font-size: 13px;
+    top: 30px;
+    left: 100px;
+    position: absolute;
+    width: 100px;
+    transition: all .4s;
+    color: #fff;
+    -webkit-transition: all .4s;
+    /* Safari */
+    opacity: 1; }
+    .post html.touch .info a {
+      color: #fff;
+      font-weight: normal; }
   .post a {
     color: #003471;
     font-family: "HelveticaNeueW01-65Medi";
@@ -231,7 +252,7 @@ header {
     /* IE6-9 */ }
     @media (max-width: 1118px) {
       .callout .subDesc {
-        display: none; } }
+        display: none !important; } }
 
 .watsonTitle {
   background: url(../img/watson-title.png) no-repeat;
@@ -297,3 +318,14 @@ header {
   width: 14px;
   height: 52px;
   margin-left: 3px; }
+
+.timeDesc span {
+  color: #464646;
+  font-family: "ITCLubalinGraphW01-Bd";
+  text-transform: uppercase;
+  padding: 0 24px;
+  font-size: 12px; }
+
+.timeDesc {
+  padding-top: 5px;
+  text-align: center; }

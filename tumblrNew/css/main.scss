@@ -1,10 +1,4 @@
-//variables
-$textColor: #464646;
-$linkColor: #003471;
 
-$fontSpecialBold: 'ITCLubalinGraphW01-Bd';
-$fontSpecial:'ITCLubalinGraphW01-XLt';
-$fontMain: 'HelveticaNeueW01-65Medi';
 
 //////////////////////////////////////*/
 
@@ -83,6 +77,17 @@ html, body{
     height: 100%;
 }
 
+/////////////////////////////////////////////////////////////////////////////
+// sass good stuff  ///////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+
+$textColor: #464646;
+$linkColor: #003471;
+
+$fontSpecialBold: 'ITCLubalinGraphW01-Bd';
+$fontSpecial:'ITCLubalinGraphW01-XLt';
+$fontMain: 'HelveticaNeueW01-65Medi';
+
 
 @mixin breakpoint($point) {
   @if $point == papa-bear {
@@ -91,7 +96,6 @@ html, body{
   @else if $point == mama-bear {
     @media (max-width: 500px) { @content; }
   }
-
 }
 
 %titleText{
@@ -101,7 +105,6 @@ html, body{
         color: $textColor;
         text-decoration: none;
 }
-
 
 
 /*/////////////////////////////////////
@@ -163,7 +166,7 @@ header{
     background-color: #fff;
     margin-bottom: 15px;
     padding: 20px 15px;
-    height: 161px;
+    height: 181px;
     box-shadow: 0px 1px 2px #000;
     position: relative;
     .holder{
@@ -175,11 +178,11 @@ header{
 
     h2{
         @extend %titleText;
+        @include breakpoint(papa-bear){
+            text-align: center;
+        }
     }
 }
-
-
-
 
 /*/////////////////////////////////////
 //
@@ -191,6 +194,8 @@ header{
     float: left;
     width: 416px;
     @include breakpoint(papa-bear){
+        position: relative;
+        //top: -130px;
     }
 }
 
@@ -239,6 +244,28 @@ header{
                 text-decoration: underline;
             }
         }
+    }
+
+
+    //special case for touch, keep list items visiable... no hover....
+    html.touch .info{
+        font-family: $fontMain;
+        font-size: 13px;
+        top: 30px;
+        left: 100px;
+        // /background-color: red;
+        
+        position: absolute;
+        width: 100px;
+        transition: all .4s;
+        color: #fff;
+        -webkit-transition: all .4s; /* Safari */
+        opacity: 1;
+        a{
+            color: #fff;
+            font-weight: normal;
+        }
+
     }
 
     a{
@@ -303,7 +330,6 @@ header{
         margin-top: 28px;
         color: #fff;
         text-transform: uppercase;
-        //letter-spacing: 1px;
         @include breakpoint(papa-bear){
             font-size: 30px;
         }
@@ -340,7 +366,7 @@ header{
         background: linear-gradient(to right,  rgba(0,0,0,0.8) 3%,rgba(0,0,0,0.78) 6%,rgba(0,0,0,0) 100%); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
         @include breakpoint(papa-bear){
-            display: none;
+            display: none !important;
         }
     }
 
@@ -393,8 +419,6 @@ header{
 
 }
 
-
-
 .nextPage a{
     background: url(../img/next-page.png) no-repeat;
     width: 35px;
@@ -405,9 +429,6 @@ header{
     text-indent: -99999px;
 
 }
-
-
-
 
 /////////////////////////////////////////////////////
 //count down clock
@@ -436,4 +457,20 @@ header{
     width: 14px;
     height: 52px;
     margin-left: 3px;
+}
+
+
+///time desc
+.timeDesc span{
+
+    color: $textColor;
+    font-family: $fontSpecialBold;
+    text-transform: uppercase;
+    padding: 0 24px;
+    font-size: 12px;
+}
+
+.timeDesc{
+    padding-top: 5px;
+    text-align: center;
 }
