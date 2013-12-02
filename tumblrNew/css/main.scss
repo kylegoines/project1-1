@@ -161,9 +161,16 @@ body{
         font-family: $fontMain;
     }
 
-    .info{
+    ul{
+        top: 30px;
+        left: 0px;
+        background-color: red;
         z-index: -999;
         position: absolute;
+        width: 100px;
+        transition: all .4s;
+        color: #fff;
+        -webkit-transition: all .4s; /* Safari */
     }
 
     a{
@@ -175,6 +182,11 @@ body{
             color: #1c5597;
         }
     }
+}
+
+.post:hover > .info{
+        left: -110px;
+
 }
 
 
@@ -267,3 +279,20 @@ body{
 
 }
 
+
+
+
+/////////////////////////////////////////////////////
+//count down clock
+/////////////////////////////////////////////////////
+
+#clock span{
+  display:inline-block;
+  width:52px;
+  height:52px;
+  background:url('../img/countdown3.jpg');
+  background-position:0 0;
+}
+#clock span:nth-child(even){
+  margin-right:0px;
+}

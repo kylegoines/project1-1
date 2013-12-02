@@ -104,9 +104,17 @@ body {
   .post p {
     width: 385px;
     font-family: "HelveticaNeueW01-65Medi"; }
-  .post .info {
+  .post ul {
+    top: 30px;
+    left: 0px;
+    background-color: red;
     z-index: -999;
-    position: absolute; }
+    position: absolute;
+    width: 100px;
+    transition: all .4s;
+    color: #fff;
+    -webkit-transition: all .4s;
+    /* Safari */ }
   .post a {
     color: #003471;
     font-family: "HelveticaNeueW01-65Medi";
@@ -114,6 +122,9 @@ body {
     text-decoration: none; }
     .post a:hover {
       color: #1c5597; }
+
+.post:hover > .info {
+  left: -110px; }
 
 .callout {
   position: fixed;
@@ -179,3 +190,13 @@ body {
     background-image: url(../img/dot-button.png); }
   .social .btn3 {
     background-image: url(../img/rss-button.png); }
+
+#clock span {
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  background: url("../img/countdown3.jpg");
+  background-position: 0 0; }
+
+#clock span:nth-child(even) {
+  margin-right: 0px; }

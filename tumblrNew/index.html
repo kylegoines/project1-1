@@ -20,17 +20,34 @@
 
             <div class="postList">
                 <header>
-                    <div class="countdown">
-                        <p>32:29:45:38</p>
+
+                    <div id="clock">   
+                      <span id="d0"></span>  
+                      <span id="d1"></span>  
+
+                      <span id="h0"></span>  
+                      <span id="h1"></span>
+
+                      <span id="m0"></span>  
+                      <span id="m1"></span>
+
+                      <span id="s0"></span>  
+                      <span id="s1"></span>  
                     </div>
+
                 </header>
 
                 <div class="post">
                     <h2 class="entry-title"><a href="">We're Going To Austin, TX</a></h2>
                     <p>This is post information: text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of lso the leap into electronic typesetting..</p>
                     <ul class="info">
-                        <li>hey im info!!!</li>
+                        <li>date of post</li>
+                        <li>999 likes</li>
+                        <li>#tag1</li>
+                        <li>#tag2</li>
+                        <li>#tag3</li>
                     </ul>
+
                 </div><!--post-->
 
                 <div class="post">
@@ -71,11 +88,49 @@
         </div>
 
 
-<div class="bg">
-</div>
+        <div class="bg">
+        </div>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 
         <script src="js/main.js"></script>
+
+
+                <script>
+
+            jQuery( function($) {
+
+                var fut = new Date("Jan 20 2014 21:15:00 GMT+0200").getTime(),
+                    obj = {};
+
+                // Number splitter
+                function intSpl( i ){
+                  i = Math.floor(i);
+                  return [~~(i/10), i%10]; // 37=[3,7] // 5=[0,5] // 0=[0,0] 
+                }
+
+                function drawTime(){  
+                  var now = new Date().getTime(),   
+                      dif = now<fut ? Math.floor( (fut-now)/1000) : 0;
+                  obj.s = intSpl(dif % 60);
+                  obj.m = intSpl(dif/60 % 60);
+                  obj.h = intSpl(dif/60/60 % 24);
+                  obj.d = intSpl(dif/60/60/24);  
+
+                  for(var key in obj){    
+                     if(obj.hasOwnProperty(key)){
+                        for(var i=0; i<2; i++){ // get el ID number (0,1)
+                          //this has to be the width of the image
+                            $('#'+ key+i).css({backgroundPosition: -obj[key][i]*51 });
+                        }
+                     }    
+                  }  
+                }
+                drawTime(); 
+                setInterval(drawTime, 1000);
+
+            });
+
+        </script>
 
 
     </body>
