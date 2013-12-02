@@ -1,29 +1,18 @@
-
-
-
-
-
 jQuery( function($) {
 
+	//jquery no conflic mode, with all that good stuff and able to use $
 
 	var bgArray = ['img/bg1.jpg','img/bg2.jpg','img/bg3.jpg','img/bg4.jpg', 'img/bg5.jpg'];
 	var text1 = "IBM Watson can cross-reference the symptoms of millions of cancer patients to help doctors design better treatments. Watson is helping doctors fight cancer.", text2 = "IBM Watson can read millions of financial reports so planners can recommend better investments. Watson will help improve financial planning.", text3 = "IBM Watson can analyze terabits of data to help operators quickly find answers to a caller’s question. Watson will help transform customer service.", text4 = "IBM Watson can read millions of financial reports so planners can recommend better investments. Watson will help improve financial planning.",text5 = "IBM Watson can cross-reference the symptoms of millions of cancer patients to help doctors design better treatments. Watson is helping doctors fight cancer.";
 	var textArray = [text1, text2, text3, text4, text5];
-
-	var wholeBG = $('.bg, .subDesc');
-	var bodyImg = $('.bg');
-	var subDesc = $('.subDesc');
-
-	var i =0;
-	///this works!!!
-	// loop through array with all new ids
+	var wholeBG = $('.bg, .subDesc'),bodyImg = $('.bg'), subDesc = $('.subDesc');
 	var i = 0;
 	var l = bgArray.length;
 
 	function changeBG(){
 		bodyImg.css('background-image','url('+bgArray[i]+')');
 		subDesc.html('<p>'+textArray[i]+'</p>');
-		console.log(textArray[i])
+		//console.log(textArray[i])
 		wholeBG.fadeIn(600);
 		}
 
@@ -31,16 +20,16 @@ jQuery( function($) {
 	function iterator() {
 		console.log(bgArray[i]);
 		wholeBG.fadeOut(1000, changeBG);
-		console.log(i)
-		i++
+		//console.log(i);
+		i++;
 		if(i == bgArray.length){
 			i = 0;
 		} 
-		setTimeout(iterator, 2000);
+		setTimeout(iterator, 9000);
 	};
 
-
-	iterator()
+	//run background switch
+	iterator();
 
 	function resizeFunc(){
 		var $width = $(window).width();
@@ -50,9 +39,14 @@ jQuery( function($) {
 		}
 	}
 
-								//this replaces the callout as the header at certian sizes
+	//this replaces the callout as the header at certian sizes
 	$( window ).resize(resizeFunc);
+
+	//run first resize to initalize if viewport starts at breakpoint
 	resizeFunc();
+
+
+
 
 	var fut = new Date("Jan 20 2014 21:15:00 GMT+0200").getTime(),
 	obj = {};
