@@ -65,13 +65,12 @@ body {
 
 .container {
   position: absolute;
-  margin-left: 192px; }
+  margin-left: 9%; }
 
 .bg {
   height: 100%;
   width: 100%;
   position: fixed;
-  background-color: red;
   z-index: -9999;
   background: url(../img/bg1.jpg);
   -webkit-background-size: cover;
@@ -79,11 +78,15 @@ body {
   -o-background-size: cover;
   background-size: cover; }
 
+header {
+  clear: both; }
+
 .postList {
   float: left;
   width: 416px; }
 
 .post {
+  z-index: 9999;
   width: 416px;
   font-size: 15px;
   line-height: 20px;
@@ -104,17 +107,24 @@ body {
   .post p {
     width: 385px;
     font-family: "HelveticaNeueW01-65Medi"; }
-  .post ul {
+  .post .info {
+    font-family: "HelveticaNeueW01-65Medi";
+    font-size: 13px;
     top: 30px;
     left: 0px;
-    background-color: red;
-    z-index: -999;
     position: absolute;
     width: 100px;
     transition: all .4s;
     color: #fff;
     -webkit-transition: all .4s;
-    /* Safari */ }
+    /* Safari */
+    opacity: 0; }
+    .post .info a {
+      color: #fff;
+      font-weight: normal; }
+      .post .info a:hover {
+        color: #e7e7e7;
+        text-decoration: underline; }
   .post a {
     color: #003471;
     font-family: "HelveticaNeueW01-65Medi";
@@ -122,17 +132,38 @@ body {
     text-decoration: none; }
     .post a:hover {
       color: #1c5597; }
+  .post iframe {
+    width: 100%; }
+  .post img {
+    margin: 0 auto;
+    width: 100%; }
 
 .post:hover > .info {
-  left: -110px; }
+  left: -100px;
+  opacity: 1; }
+
+.info:hover {
+  left: -100px; }
 
 .callout {
   position: fixed;
   padding-top: 130px;
   float: left;
   margin-left: 40%; }
+  @media (max-width: 1118px) {
+    .callout {
+      margin-left: 0;
+      float: none;
+      position: relative;
+      padding-top: 0px;
+      margin: 0 auto;
+      clear: both;
+      width: 416px; } }
   .callout .calloutHeader {
     float: left; }
+    @media (max-width: 1118px) {
+      .callout .calloutHeader {
+        width: 416px; } }
   .callout h2 {
     font-family: "ITCLubalinGraphW01-Bd";
     font-size: 20px;
@@ -146,7 +177,8 @@ body {
     line-height: 17px; }
   .callout .desc {
     margin-top: 19px;
-    font-family: "ITCLubalinGraphW01-Bd"; }
+    font-size: 15px;
+    font-family: 'ITCLubalinGraphW01-Bk'; }
   .callout .subDesc {
     position: relative;
     top: 180px;
@@ -168,12 +200,21 @@ body {
     /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#00000000',GradientType=1 );
     /* IE6-9 */ }
+    @media (max-width: 1118px) {
+      .callout .subDesc {
+        display: none; } }
 
 .watsonTitle {
   background: url(../img/watson-title.png) no-repeat;
   width: 282px;
   height: 34px;
   text-indent: -9999px; }
+  @media (max-width: 1118px) {
+    .watsonTitle {
+      width: 100%;
+      height: 49px;
+      background-position: cover;
+      background-size: cover; } }
 
 .social {
   float: left; }
@@ -191,11 +232,20 @@ body {
   .social .btn3 {
     background-image: url(../img/rss-button.png); }
 
+.nextPage a {
+  background: url(../img/next-page.png) no-repeat;
+  width: 35px;
+  position: fixed;
+  right: 30px;
+  top: 130px;
+  height: 97px;
+  text-indent: -99999px; }
+
 #clock span {
   display: inline-block;
-  width: 52px;
+  width: 30px;
   height: 52px;
-  background: url("../img/countdown3.jpg");
+  background: url("../img/new_num.jpg");
   background-position: 0 0; }
 
 #clock span:nth-child(even) {

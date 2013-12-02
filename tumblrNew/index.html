@@ -21,7 +21,7 @@
             <div class="postList">
                 <header>
 
-                    <div id="clock">   
+                    <div id="clock" class="countdown">   
                       <span id="d0"></span>  
                       <span id="d1"></span>  
 
@@ -37,34 +37,70 @@
 
                 </header>
 
+
+
+                <div class="post">
+                    <ul class="info">
+                        <li>date of post</li>
+                        <li><a href="">999 likes</a></li>
+                        <li><a href="">#tag1</a></li>
+                        <li><a href="">#tag2</a></li>
+                        <li><a href="">#tag3</a></li>
+                    </ul>
+                    <h2 class="entry-title"><a href="">We're Going To Austin, TX</a></h2>
+                    <p>This is post information: text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of lso the leap into electronic typesetting..</p>
+
+
+                </div><!--post-->
+
+
+
                 <div class="post">
                     <h2 class="entry-title"><a href="">We're Going To Austin, TX</a></h2>
                     <p>This is post information: text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of lso the leap into electronic typesetting..</p>
                     <ul class="info">
                         <li>date of post</li>
-                        <li>999 likes</li>
-                        <li>#tag1</li>
-                        <li>#tag2</li>
-                        <li>#tag3</li>
+                        <li><a href="">999 likes</a></li>
+                        <li><a href="">#tag1</a></li>
+                        <li><a href="">#tag2</a></li>
+                        <li><a href="">#tag3</a></li>
                     </ul>
 
                 </div><!--post-->
 
-                <div class="post">
-                    <h2 class="entry-title"><a href="">We're Going To Austin, TX</a></h2>
-                    <p>This is post information: text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of lso the leap into electronic typesetting..</p>
-                    <a href="">Learn More about who we are</a>
-                </div><!--post-->
+
 
                 <div class="post">
-                    <h2 class="entry-title"><a href="">We're Going To Austin, TX</a></h2>
-                    <p>This is post information: text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of lso the leap into electronic typesetting..</p>
+                    <iframe width="560" height="315" src="//www.youtube.com/embed/98BIu9dpwHU" frameborder="0" allowfullscreen></iframe>
+                    <ul class="info">
+                        <li>date of post</li>
+                        <li><a href="">999 likes</a></li>
+                        <li><a href="">#tag1</a></li>
+                        <li><a href="">#tag2</a></li>
+                        <li><a href="">#tag3</a></li>
+                    </ul>
+
                 </div><!--post-->
 
+
+
                 <div class="post">
+                    <img src="img/test3.jpg">
+                    <img src="img/test1.jpg">
+                    <img src="img/test2.jpg">
                     <h2 class="entry-title"><a href="">We're Going To Austin, TX</a></h2>
-                    <p>This is post information: text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of lso the leap into electronic typesetting..</p>
+
+                    <ul class="info">
+                        <li>date of post</li>
+                        <li><a href="">999 likes</a></li>
+                        <li><a href="">#tag1</a></li>
+                        <li><a href="">#tag2</a></li>
+                        <li><a href="">#tag3</a></li>
+                    </ul>
+
                 </div><!--post-->
+
+
 
             </div><!--postList-->
 
@@ -82,9 +118,14 @@
                 </ul>
                 <div class="subDesc"><p>IBM Watson can read millions of financial reports so planners can recommend better investments. Watson will help improve financial planning.</p>
                 </div>
+                <div class="responsiveBreaker"></div>
             </div>
 
 
+        </div>
+
+        <div class="nextPage">
+            <a href="">next page</a>
         </div>
 
 
@@ -96,6 +137,8 @@
 
 
         <script>
+
+        //this is a working countdown timer
 
             jQuery( function($) {
 
@@ -120,7 +163,7 @@
                      if(obj.hasOwnProperty(key)){
                         for(var i=0; i<2; i++){ // get el ID number (0,1)
                           //this has to be the width of the image
-                            $('#'+ key+i).css({backgroundPosition: -obj[key][i]*51 });
+                            $('#'+ key+i).css({backgroundPosition: -obj[key][i]*30 });
                         }
                      }    
                   }  
@@ -129,6 +172,23 @@
                 setInterval(drawTime, 1000);
 
             });
+
+        </script>
+
+        <script>
+        //this replaces the callout as the header at certian sizes
+            $( window ).resize(function() {
+              var $width = $(window).width();
+              if($width <= 1118){
+                var keep = $('.callout').detach();
+                //var postHeight = $('.container').height()
+                //console.log(postHeight)
+                //$('.container').css('top',(parseInt(130-postHeight) + 'px'))
+                
+                $('.postList').prepend(keep)
+              }
+            });
+
 
         </script>
 

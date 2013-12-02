@@ -84,6 +84,18 @@ html, body{
 }
 
 
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (max-width: 1118px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (max-width: 500px) { @content; }
+  }
+
+}
+
+
+
 /*/////////////////////////////////////
 //
 //typogrpahy
@@ -106,20 +118,31 @@ body{
 
 .container{
     position: absolute;
-    margin-left: 192px;
+    margin-left: 9%;
+
+    @include breakpoint(papa-bear){
+        //top: -130px;
+    }
 }
 
 .bg{
     height: 100%;
     width: 100%;
     position: fixed;
-    background-color: red;
     z-index: -9999;
     background: url(../img/bg1.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+
+///////////////////////////////
+//header
+//////////////////////////////
+header{
+    clear: both;
 }
 
 
@@ -132,9 +155,12 @@ body{
 .postList{
     float: left;
     width: 416px;
+    @include breakpoint(papa-bear){
+    }
 }
 
 .post{
+    z-index: 9999;
     width: 416px;
     font-size: 15px;
     line-height: 20px;
@@ -161,16 +187,27 @@ body{
         font-family: $fontMain;
     }
 
-    ul{
+    .info{
+        font-family: $fontMain;
+        font-size: 13px;
         top: 30px;
         left: 0px;
-        background-color: red;
-        z-index: -999;
+        // /background-color: red;
+        
         position: absolute;
         width: 100px;
         transition: all .4s;
         color: #fff;
         -webkit-transition: all .4s; /* Safari */
+        opacity: 0;
+        a{
+            color: #fff;
+            font-weight: normal;
+            &:hover{
+                color: #e7e7e7;
+                text-decoration: underline;
+            }
+        }
     }
 
     a{
@@ -182,11 +219,25 @@ body{
             color: #1c5597;
         }
     }
+
+    iframe{
+        width: 100%;
+    }
+
+    img{
+        margin: 0 auto;
+        width: 100%;
+    }
 }
 
 .post:hover > .info{
-        left: -110px;
+        left: -100px;
+        opacity: 1;
 
+}
+
+.info:hover{
+    left: -100px;
 }
 
 
@@ -198,9 +249,26 @@ body{
     //background: red;
     margin-left: 40%;
 
+    @include breakpoint(papa-bear){
+        margin-left: 0;
+        float: none;
+        position: relative;
+        padding-top: 0px;
+        margin: 0 auto;
+        clear: both;
+        width: 416px;
+    }
+
     .calloutHeader{
         float: left;
+        @include breakpoint(papa-bear){
+            //float: none;
+            width: 416px;
+            //background-color: red;
+        }
     }
+
+
 
     h2{
         font-family: $fontSpecialBold;
@@ -220,8 +288,10 @@ body{
 
     .desc{
         margin-top: 19px;
+        font-size: 15px;
         //TODO: get a better small luciban reg
-        font-family: $fontSpecialBold;
+
+        font-family:'ITCLubalinGraphW01-Bk';
     }
 
     .subDesc{
@@ -238,6 +308,9 @@ body{
         background: -ms-linear-gradient(left,  rgba(0,0,0,0.8) 3%,rgba(0,0,0,0.78) 6%,rgba(0,0,0,0) 100%); /* IE10+ */
         background: linear-gradient(to right,  rgba(0,0,0,0.8) 3%,rgba(0,0,0,0.78) 6%,rgba(0,0,0,0) 100%); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+        @include breakpoint(papa-bear){
+            display: none;
+        }
     }
 
 }
@@ -247,6 +320,13 @@ body{
     width: 282px;
     height: 34px;
     text-indent: -9999px;
+    @include breakpoint(papa-bear){
+
+    width: 100%;
+    height: 49px;
+    background-position: cover;
+    background-size: cover;
+    }
 }
 
 .social{
@@ -281,6 +361,19 @@ body{
 
 
 
+.nextPage a{
+    background: url(../img/next-page.png) no-repeat;
+    width: 35px;
+    position: fixed;
+    right: 30px;
+    top: 130px;
+    height: 97px;
+    text-indent: -99999px;
+
+}
+
+
+
 
 /////////////////////////////////////////////////////
 //count down clock
@@ -288,9 +381,9 @@ body{
 
 #clock span{
   display:inline-block;
-  width:52px;
+  width:30px;
   height:52px;
-  background:url('../img/countdown3.jpg');
+  background:url('../img/new_num.jpg');
   background-position:0 0;
 }
 #clock span:nth-child(even){
