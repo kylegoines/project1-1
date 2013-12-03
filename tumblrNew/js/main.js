@@ -17,8 +17,6 @@ jQuery( function($) {
 	    });
 	}
 
-	// Usage:
-
 	preload(bgArray);
 
 	function changeBG(){
@@ -37,7 +35,7 @@ jQuery( function($) {
 		if(i == bgArray.length){
 			i = 0;
 		} 
-		setTimeout(iterator, 9000);
+		setTimeout(iterator, 5000);
 	};
 
 	//run background switch

@@ -452,6 +452,17 @@ header{
 
 }
 
+.backPage a{
+    background: url(../img/back-page.png) no-repeat;
+    width: 35px;
+    position: fixed;
+    right: 30px;
+    top: 130px;
+    height: 97px;
+    text-indent: -99999px;
+
+}
+
 /////////////////////////////////////////////////////
 //count down clock
 /////////////////////////////////////////////////////
