@@ -64,6 +64,10 @@ header h2, .post .personName, .post h2 a {
   color: #464646;
   text-decoration: none; }
 
+.callout .desc {
+  line-height: 21px;
+  font-size: 15px; }
+
 h1, h2, h3, h4, h5, h6, p, ul {
   color: #464646; }
 
@@ -111,9 +115,6 @@ header {
     height: 84px; }
   header h2 {
     padding-left: 15px; }
-    @media (max-width: 1118px) {
-      header h2 {
-        text-align: center; } }
 
 .postList {
   float: left;
@@ -147,6 +148,7 @@ header {
     width: 385px;
     font-family: "HelveticaNeueW01-65Medi"; }
   .post .info {
+    z-index: -1;
     font-family: "HelveticaNeueW01-65Medi";
     font-size: 13px;
     top: 30px;
@@ -154,9 +156,9 @@ header {
     text-align: right;
     position: absolute;
     width: 100px;
-    transition: all .4s;
+    transition: all .4s ease-out;
     color: #fff;
-    -webkit-transition: all .4s;
+    -webkit-transition: all .4s ease-out;
     /* Safari */
     opacity: 0; }
     .post .info .date {
@@ -164,9 +166,9 @@ header {
       font-family: "ITCLubalinGraphW01-Bd"; }
       .post .info .date span {
         display: block;
-        padding-top: 9px;
-        padding-bottom: 3px;
-        font-size: 28px;
+        padding-top: 17px;
+        padding-bottom: 10px;
+        font-size: 45px;
         font-family: "ITCLubalinGraphW01-Bd"; }
     .post .info a {
       color: #fff;
@@ -232,7 +234,6 @@ header {
         width: 416px; } }
   .callout .desc {
     margin-top: 19px;
-    font-size: 15px;
     font-family: 'ITCLubalinGraphW01-Bk'; }
   .callout .subDesc {
     position: relative;
@@ -271,6 +272,8 @@ header {
       margin-top: 15px; } }
 
 .social {
+  position: relative;
+  top: -5px;
   float: left; }
   .social a {
     display: block;
@@ -278,14 +281,16 @@ header {
     height: 28px;
     width: 28px; }
   .social li {
-    padding-top: 5px; }
+    padding-top: 5px;
+    margin-left: 6px; }
     @media (max-width: 1118px) {
       .social li {
         float: left;
         padding-right: 10px;
         position: relative;
         top: 10px;
-        margin-bottom: 20px; } }
+        margin-bottom: 20px;
+        margin-left: 0px; } }
   .social .btn1 {
     background-image: url(../img/ibm.png); }
   .social .btn2 {
