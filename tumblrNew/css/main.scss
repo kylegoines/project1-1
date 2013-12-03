@@ -252,13 +252,26 @@ header{
         top: 30px;
         left: 0px;
         // /background-color: red;
-        
+        text-align: right;
         position: absolute;
         width: 100px;
         transition: all .4s;
         color: #fff;
         -webkit-transition: all .4s; /* Safari */
         opacity: 0;
+
+        .date{
+            font-size: 24px;
+            font-family: $fontSpecialBold;;
+
+            span{
+                display: block;
+                padding-top: 9px;
+                padding-bottom: 3px;
+                font-size: 28px;
+                font-family: $fontSpecialBold;
+            }
+        }
         a{
             color: #fff;
             font-weight: normal;
@@ -290,7 +303,7 @@ header{
 }
 
 .post:hover > .info{
-        left: -100px;
+        left: -110px;
         opacity: 1;
 
 }
@@ -356,7 +369,6 @@ header{
         position: relative;
         top: 180px;
         margin-top: 180px;
-        background-color: red;
         font-family: $fontMain;
         padding: 5px 10px;
         background: -moz-linear-gradient(left,  rgba(0,0,0,0.8) 3%, rgba(0,0,0,0.78) 6%, rgba(0,0,0,0) 100%); /* FF3.6+ */
