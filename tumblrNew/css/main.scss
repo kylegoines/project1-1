@@ -168,19 +168,20 @@ header{
     line-height: 20px;
     background-color: #fff;
     margin-bottom: 15px;
-    padding: 20px 15px;
+    padding-top: 20px;
     height: 181px;
     box-shadow: 0px 1px 2px #000;
     position: relative;
     .holder{
         background-color: #000;
-        width: 390px;
+        width: 395px;
         margin: 0 auto;
         height: 84px;
     }
 
     h2{
         @extend %titleText;
+        padding-left: 15px;
         @include breakpoint(papa-bear){
             text-align: center;
         }
@@ -228,6 +229,10 @@ header{
     box-shadow: 0px 1px 2px #000;
     position: relative;
 
+    .personName{
+        @extend %titleText;
+    }
+
     h2 a{
         @extend %titleText;
         &:hover{
@@ -263,9 +268,6 @@ header{
             }
         }
     }
-
-
-
 
     a{
         color: $linkColor;
@@ -402,18 +404,27 @@ header{
             padding-right: 10px;
             position: relative;
             top: 10px;
+            margin-bottom: 20px;
         }
     }
     .btn1{
-        background-image: url(../img/avatar-button.png); 
+        background-image: url(../img/ibm.png); 
     }
 
     .btn2{
-        background-image: url(../img/dot-button.png); 
+        background-image: url(../img/fb.png); 
     }
 
     .btn3{
-        background-image: url(../img/rss-button.png); 
+        background-image: url(../img/rss.png); 
+    }
+
+    .btn4{
+        background-image: url(../img/youtube.png); 
+    }
+
+    .btn5{
+        background-image: url(../img/twitter.png); 
     }
 
 }
@@ -441,11 +452,11 @@ header{
 
 #clock span{
   display:inline-block;
-  width:30px;
+  width:36px;
   height:52px;
-  background:url('../img/new_num.jpg');
+  background:url('../img/mk3.jpg');
   background-position:0 0;
-  margin-right: 6px;
+  //margin-right: 2px;
 }
 #clock span:nth-child(even){
   margin-right:0px;

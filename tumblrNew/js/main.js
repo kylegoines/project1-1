@@ -69,7 +69,7 @@ jQuery( function($) {
 			if(obj.hasOwnProperty(key)){
 				for(var i=0; i<2; i++){ // get el ID number (0,1)
 					//this has to be the width of the image
-					$('#'+ key+i).css({backgroundPosition: -obj[key][i]*30 });
+					$('#'+ key+i).css({backgroundPosition: -obj[key][i]*36 });
 				}
 			}    
 		}  
