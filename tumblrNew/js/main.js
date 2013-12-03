@@ -9,6 +9,18 @@ jQuery( function($) {
 	var i = 0;
 	var l = bgArray.length;
 
+	function preload(arrayOfImages) {
+	    $(arrayOfImages).each(function(){
+	        $('<img/>')[0].src = this;
+	        // Alternatively you could use:
+	        // (new Image()).src = this;
+	    });
+	}
+
+	// Usage:
+
+	preload(bgArray);
+
 	function changeBG(){
 		bodyImg.css('background-image','url('+bgArray[i]+')');
 		subDesc.html('<p>'+textArray[i]+'</p>');
