@@ -78,10 +78,21 @@ jQuery( function($) {
 	function drawTime(){  
 		var now = new Date().getTime(),   
 		dif = now<fut ? Math.floor( (fut-now)/1000) : 0;
+
 		obj.s = intSpl(dif % 60);
 		obj.m = intSpl(dif/60 % 60);
 		obj.h = intSpl(dif/60/60 % 24);
 		obj.d = intSpl(dif/60/60/24);  
+
+
+		//look at this vv it checks to see if each number is zero. im dumb
+		if(obj.s[0]===0 && obj.s[1]==0 && 
+			obj.m[0]===0 && obj.m[1]==0 && 
+			obj.h[0]===0 && obj.h[1]==0 && 
+			obj.d[0]===0 && obj.d[1]==0){
+			$('header, .headPost').remove();
+		}	
+
 
 		for(var key in obj){    
 			if(obj.hasOwnProperty(key)){
@@ -91,6 +102,8 @@ jQuery( function($) {
 				}
 			}    
 		}  
+
+
 	}
 
 	drawTime(); 

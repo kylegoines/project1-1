@@ -140,7 +140,8 @@ header {
   margin-bottom: 15px;
   padding: 20px 15px;
   box-shadow: 0px 1px 2px #000;
-  position: relative; }
+  position: relative;
+  clear: both; }
   .post h2 a:hover {
     color: #464646;
     text-decoration: underline; }
@@ -250,7 +251,7 @@ header {
         width: 416px; } }
   .callout .desc {
     margin-top: 9px;
-    font-family: 'ITCLubalinGraphW01-Md'; }
+    font-family: "ITCLubalinGraphW01-Md"; }
   .callout .subDesc {
     position: relative;
     top: 180px;

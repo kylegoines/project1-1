@@ -85,7 +85,7 @@ $textColor: #464646;
 $linkColor: #003471;
 
 $fontSpecialBold: 'ITCLubalinGraphW01-Bd';
-$fontSpecial:'ITCLubalinGraphW01-XLt';
+$fontSpecial:'ITCLubalinGraphW01-Md';
 $fontMain: 'HelveticaNeueW01-65Medi';
 
 
@@ -233,6 +233,7 @@ header{
     padding: 20px 15px;
     box-shadow: 0px 1px 2px #000;
     position: relative;
+    clear: both;
 
     .personName{
         @extend %titleText;
@@ -389,7 +390,7 @@ header{
     .desc{
         margin-top: 9px;
         @extend %paragraph;
-        font-family:'ITCLubalinGraphW01-Md';
+        font-family: $fontSpecial;
     }
 
     .subDesc{
