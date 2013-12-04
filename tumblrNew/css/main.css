@@ -161,6 +161,9 @@ header {
     -webkit-transition: all .4s ease-out;
     /* Safari */
     opacity: 0; }
+    .post .info li {
+      clear: both;
+      display: block; }
     .post .info .date {
       font-size: 24px;
       font-family: "ITCLubalinGraphW01-Bd"; }
@@ -188,6 +191,19 @@ header {
   .post img {
     margin: 0 auto;
     width: 100%; }
+  .post .likes {
+    margin: 10px 0;
+    display: block;
+    float: right; }
+  .post .likes:before {
+    display: block;
+    content: "";
+    background-image: url("../img/heart.png");
+    height: 9px;
+    width: 10px;
+    float: left;
+    margin-top: 6px;
+    margin-right: 5px; }
 
 .post:hover > .info {
   left: -110px;
@@ -218,8 +234,8 @@ header {
   .callout h2 {
     font-family: "ITCLubalinGraphW01-Bd";
     font-size: 20px;
-    margin-top: 28px;
-    color: #fff;
+    margin-top: 17px;
+    color: #18c1f6;
     text-transform: uppercase; }
     @media (max-width: 1118px) {
       .callout h2 {
@@ -233,8 +249,8 @@ header {
       .callout p {
         width: 416px; } }
   .callout .desc {
-    margin-top: 19px;
-    font-family: 'ITCLubalinGraphW01-Bk'; }
+    margin-top: 9px;
+    font-family: 'ITCLubalinGraphW01-Md'; }
   .callout .subDesc {
     position: relative;
     top: 180px;
@@ -258,6 +274,8 @@ header {
     @media (max-width: 1118px) {
       .callout .subDesc {
         display: none !important; } }
+    .callout .subDesc p {
+      font-size: 11px; }
 
 .watsonTitle {
   background: url(../img/watson-title.png) no-repeat;

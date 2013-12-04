@@ -265,6 +265,10 @@ header{
         color: #fff;
         -webkit-transition: all .4s ease-out; /* Safari */
         opacity: 0;
+        li{
+            clear: both;
+            display: block;
+        }
 
         .date{
             font-size: 24px;
@@ -305,6 +309,23 @@ header{
     img{
         margin: 0 auto;
         width: 100%;
+    }
+
+    .likes{
+        margin: 10px 0;
+        display: block;
+        float: right;
+    }
+
+    .likes:before{
+        display: block;
+        content: "";
+        background-image: url('../img/heart.png');
+        height: 9px;
+        width: 10px;
+        float: left;
+        margin-top: 6px;
+        margin-right: 5px;
     }
 }
 
@@ -347,8 +368,8 @@ header{
     h2{
         font-family: $fontSpecialBold;
         font-size: 20px;
-        margin-top: 28px;
-        color: #fff;
+        margin-top: 17px;
+        color: #18c1f6;
         text-transform: uppercase;
         @include breakpoint(papa-bear){
             font-size: 30px;
@@ -366,17 +387,19 @@ header{
     }
 
     .desc{
-        margin-top: 19px;
+        margin-top: 9px;
         @extend %paragraph;
-        font-family:'ITCLubalinGraphW01-Bk';
+        font-family:'ITCLubalinGraphW01-Md';
     }
 
     .subDesc{
+
         position: relative;
         top: 180px;
         margin-top: 180px;
         font-family: $fontMain;
         padding: 5px 10px;
+
         background: -moz-linear-gradient(left,  rgba(0,0,0,0.8) 3%, rgba(0,0,0,0.78) 6%, rgba(0,0,0,0) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, right top, color-stop(3%,rgba(0,0,0,0.8)), color-stop(6%,rgba(0,0,0,0.78)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(left,  rgba(0,0,0,0.8) 3%,rgba(0,0,0,0.78) 6%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
@@ -386,6 +409,11 @@ header{
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
         @include breakpoint(papa-bear){
             display: none !important;
+        }
+
+        p{
+            font-size: 11px;
+            //letter-spacing: 1px;
         }
     }
 

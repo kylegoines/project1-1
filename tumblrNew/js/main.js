@@ -22,8 +22,14 @@ jQuery( function($) {
 	function changeBG(){
 		bodyImg.css('background-image','url('+bgArray[i]+')');
 		subDesc.html('<p>'+textArray[i]+'</p>');
+		if(i === 0){
+			//becuase there is no text on the first picture.
+			bodyImg.fadeIn()
+		}else{
+			wholeBG.fadeIn(600);	
+		}
 		//console.log(textArray[i])
-		wholeBG.fadeIn(600);
+		
 		}
 
 
@@ -39,6 +45,8 @@ jQuery( function($) {
 	};
 
 	//run background switch
+	//wholeBG.hide();
+	subDesc.hide();
 	iterator();
 
 	function resizeFunc(){
