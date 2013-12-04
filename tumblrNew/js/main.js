@@ -3,7 +3,7 @@ jQuery( function($) {
 	//jquery no conflic mode, with all that good stuff and able to use $
 
 	var bgArray = ['img/bg1.jpg','img/bg2.jpg','img/bg3.jpg','img/bg4.jpg', 'img/bg5.jpg'];
-	var text1 = "IBM Watson can cross-reference the symptoms of millions of cancer patients to help doctors design better treatments. Watson is helping doctors fight cancer.", text2 = "IBM Watson can read millions of financial reports so planners can recommend better investments. Watson will help improve financial planning.", text3 = "IBM Watson can analyze terabits of data to help operators quickly find answers to a caller’s question. Watson will help transform customer service.", text4 = "IBM Watson can read millions of financial reports so planners can recommend better investments. Watson will help improve financial planning.",text5 = "IBM Watson can cross-reference the symptoms of millions of cancer patients to help doctors design better treatments. Watson is helping doctors fight cancer.";
+	var text1 = "IBM Watson can cross-reference the symptoms of millions of cancer patients to help doctors design better treatments. Watson is helping doctors fight cancer.", text2 = "IBM Watson can cross-reference the symptoms of millions of cancer patients to help doctors design better treatments. Watson is helping doctors fight cancer.", text3 = "IBM Watson can read millions of financial reports so planners can recommend better investments. Watson will help improve financial planning.", text4 = "IBM Watson can analyze terabits of data to help operators quickly find answers to a caller’s question. Watson will help transform customer service.",text5 = "IBM Watson can analyze terabits of data to help operators quickly find answers to a caller’s question. Watson will help transform customer service.";
 	var textArray = [text1, text2, text3, text4, text5];
 	var wholeBG = $('.bg, .subDesc'),bodyImg = $('.bg'), subDesc = $('.subDesc');
 	var i = 0;
@@ -34,7 +34,7 @@ jQuery( function($) {
 
 
 	function iterator() {
-		console.log(bgArray[i]);
+		//console.log(bgArray[i]);
 		wholeBG.fadeOut(1000, changeBG);
 		//console.log(i);
 		i++;
@@ -47,6 +47,7 @@ jQuery( function($) {
 	//run background switch
 	//wholeBG.hide();
 	subDesc.hide();
+	//remove iterator() from page 2
 	iterator();
 
 	function resizeFunc(){
