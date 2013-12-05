@@ -48,7 +48,10 @@ jQuery( function($) {
 	//wholeBG.hide();
 	subDesc.hide();
 	//remove iterator() from page 2
-	iterator();
+	if(isHome){
+		iterator();
+	}
+	
 
 	function resizeFunc(){
 		var $width = $(window).width();

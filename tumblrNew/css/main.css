@@ -142,12 +142,21 @@ header {
   box-shadow: 0px 1px 2px #000;
   position: relative;
   clear: both; }
+  .post ul {
+    position: relative;
+    margin-left: 20px;
+    width: 300px;
+    color: #7b7b7b;
+    font-family: "HelveticaNeueW01-65Medi"; }
+    .post ul li {
+      list-style-type: square; }
   .post h2 a:hover {
     color: #464646;
     text-decoration: underline; }
   .post p {
     width: 385px;
-    font-family: "HelveticaNeueW01-65Medi"; }
+    font-family: "HelveticaNeueW01-65Medi";
+    padding: 5px 0; }
   .post .info {
     z-index: -1;
     font-family: "HelveticaNeueW01-65Medi";
@@ -161,7 +170,8 @@ header {
     color: #fff;
     -webkit-transition: all .4s ease-out;
     /* Safari */
-    opacity: 0; }
+    opacity: 0;
+    margin-left: 0px; }
     .post .info li {
       clear: both;
       display: block; }
