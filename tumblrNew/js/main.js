@@ -24,13 +24,13 @@ jQuery( function($) {
 		subDesc.html('<p>'+textArray[i]+'</p>');
 		if(i === 0){
 			//becuase there is no text on the first picture.
-			bodyImg.fadeIn()
+			bodyImg.fadeIn();
 		}else{
 			wholeBG.fadeIn(600);	
 		}
 		//console.log(textArray[i])
 		
-		}
+	}
 
 
 	function iterator() {
@@ -40,7 +40,7 @@ jQuery( function($) {
 		i++;
 		if(i == bgArray.length){
 			i = 0;
-		} 
+		}
 		setTimeout(iterator, 5000);
 	};
 
@@ -57,7 +57,7 @@ jQuery( function($) {
 		var $width = $(window).width();
 		if($width <= 1118){
 			var keep = $('.callout').detach();
-			$('.postList').prepend(keep)
+			$('.postList').prepend(keep);
 		}
 	}
 
@@ -79,14 +79,14 @@ jQuery( function($) {
 		return [~~(i/10), i%10]; // 37=[3,7] // 5=[0,5] // 0=[0,0] 
 	}
 
-	function drawTime(){  
-		var now = new Date().getTime(),   
+	function drawTime(){
+		var now = new Date().getTime(),  
 		dif = now<fut ? Math.floor( (fut-now)/1000) : 0;
 
 		obj.s = intSpl(dif % 60);
 		obj.m = intSpl(dif/60 % 60);
 		obj.h = intSpl(dif/60/60 % 24);
-		obj.d = intSpl(dif/60/60/24);  
+		obj.d = intSpl(dif/60/60/24);
 
 
 		//look at this vv it checks to see if each number is zero. im dumb
@@ -95,7 +95,7 @@ jQuery( function($) {
 			obj.h[0]===0 && obj.h[1]==0 && 
 			obj.d[0]===0 && obj.d[1]==0){
 			$('header, .headPost').remove();
-		}	
+		}
 
 
 		for(var key in obj){    
@@ -105,12 +105,10 @@ jQuery( function($) {
 					$('#'+ key+i).css({backgroundPosition: -obj[key][i]*36 });
 				}
 			}    
-		}  
-
-
+		}
 	}
 
-	drawTime(); 
+	drawTime();
 	setInterval(drawTime, 1000);
 
 });
