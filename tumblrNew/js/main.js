@@ -26,7 +26,7 @@ jQuery( function($) {
 			//becuase there is no text on the first picture.
 			bodyImg.fadeIn();
 		}else{
-			wholeBG.fadeIn(600);	
+			wholeBG.fadeIn(600);
 		}
 		//console.log(textArray[i])
 		
@@ -42,7 +42,7 @@ jQuery( function($) {
 			i = 0;
 		}
 		setTimeout(iterator, 5000);
-	};
+	}
 
 	//run background switch
 	//wholeBG.hide();
@@ -80,7 +80,7 @@ jQuery( function($) {
 	}
 
 	function drawTime(){
-		var now = new Date().getTime(),  
+		var now = new Date().getTime(),
 		dif = now<fut ? Math.floor( (fut-now)/1000) : 0;
 
 		obj.s = intSpl(dif % 60);
@@ -98,13 +98,13 @@ jQuery( function($) {
 		}
 
 
-		for(var key in obj){    
+		for(var key in obj){
 			if(obj.hasOwnProperty(key)){
 				for(var i=0; i<2; i++){ // get el ID number (0,1)
 					//this has to be the width of the image
 					$('#'+ key+i).css({backgroundPosition: -obj[key][i]*36 });
 				}
-			}    
+			}
 		}
 	}
 
