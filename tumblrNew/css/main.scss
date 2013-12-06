@@ -563,5 +563,37 @@ header{
 
 .timeDesc{
     padding-top: 5px;
+    position: relative;
     text-align: center;
 }
+
+.post ul.meta{
+    top: 15px;
+    display: block !important;
+    margin-left: 329px;
+}
+.meta li{
+    width: 30px;
+    display: inline-block;
+}
+
+.like{
+    width: 25px !important;
+    cursor: pointer;
+}
+
+.reblog{
+    cursor: pointer;
+}
+
+.likeNum{
+    font-family: $fontSpecialBold;
+    font-size: 20px;
+    color: #4c4c4c;
+    position: relative;
+    top: -5px;
+}
+
+
+
+

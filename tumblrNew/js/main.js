@@ -2,9 +2,9 @@ jQuery( function($) {
 
 	//jquery no conflic mode, with all that good stuff and able to use $
 
-	var bgArray = ['img/bg1.jpg','img/bg2.jpg','img/bg3.jpg','img/bg4.jpg', 'img/bg5.jpg'];
-	var text1 = "IBM Watson can cross-reference the symptoms of millions of cancer patients to help doctors design better treatments. Watson is helping doctors fight cancer.", text2 = "IBM Watson can cross-reference the symptoms of millions of cancer patients to help doctors design better treatments. Watson is helping doctors fight cancer.", text3 = "IBM Watson can read millions of financial reports so planners can recommend better investments. Watson will help improve financial planning.", text4 = "IBM Watson can analyze terabits of data to help operators quickly find answers to a caller’s question. Watson will help transform customer service.",text5 = "IBM Watson can analyze terabits of data to help operators quickly find answers to a caller’s question. Watson will help transform customer service.";
-	var textArray = [text1, text2, text3, text4, text5];
+	var bgArray = ['img/bg1.jpg','img/bg2.jpg','img/bg3.jpg','img/bg4.jpg'];
+	var text1 = "IBM Watson can cross-reference the symptoms of millions of cancer patients to help doctors design better treatments. Watson is helping doctors fight cancer.", text2 = "IBM Watson can cross-reference the symptoms of millions of cancer patients to help doctors design better treatments. Watson is helping doctors fight cancer.", text3 = "IBM Watson can read millions of financial reports so planners can recommend better investments. Watson will help improve financial planning.", text4 = "IBM Watson can analyze terabits of data to help operators quickly find answers to a caller’s question. Watson will help transform customer service.";
+	var textArray = [text1, text2, text3, text4];
 	var wholeBG = $('.bg, .subDesc'),bodyImg = $('.bg'), subDesc = $('.subDesc');
 	var i = 0;
 	var l = bgArray.length;
@@ -70,7 +70,7 @@ jQuery( function($) {
 
 
 
-	var fut = new Date("Jan 20 2014 21:15:00 GMT+0200").getTime(),
+	var fut = new Date("Mar 05 2014 21:15:00 GMT+0200").getTime(),
 	obj = {};
 
 	// Number splitter
