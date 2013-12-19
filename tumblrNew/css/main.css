@@ -404,3 +404,6 @@ header {
   color: #4c4c4c;
   position: relative;
   top: -5px; }
+
+h2 a {
+  line-height: 1em !important; }
